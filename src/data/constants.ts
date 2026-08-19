@@ -251,7 +251,7 @@ export const EXPERIENCE: Experience[] = [
     company: "Pyramid Pixel",
     description: [
       "Built an agency from the ground up advising brands on marketing strategy, advertising, and practical AI automation.",
-      "Designed and sold 100+ AI-powered workflows for content, campaign optimization, and client reporting.",
+      "Designed and sold 100+ n8n-powered AI workflows for content, campaign optimization, and client reporting.",
       "Plan and run paid advertising across Meta and Google, from targeting and creative to budget and reporting.",
     ],
     skills: [
@@ -285,9 +285,9 @@ export const EXPERIENCE: Experience[] = [
     startDate: "—",
     endDate: "—",
     title: "Marketing Consultant — Multi-Industry",
-    company: "Food & Beverage · Hospitality · Electronics",
+    company: "Food & Beverage · Hospitality · Electronics · Fashion",
     description: [
-      "Delivered marketing and advertising strategy across food & beverage, hotels & accommodation, and electronics brands.",
+      "Delivered marketing and advertising strategy across food & beverage, hotels & accommodation, electronics, and fashion brands.",
       "Adapted positioning, creative, and campaign execution to each industry's audience and buying behavior.",
     ],
     skills: [

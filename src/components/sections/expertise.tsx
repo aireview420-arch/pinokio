@@ -44,7 +44,7 @@ const CATEGORIES: ExpertiseCategory[] = [
     accent: "from-emerald-500/20 to-emerald-500/0",
     skills: [
       "Prompt Engineering",
-      "AI Workflow Automation (100+ built & sold)",
+      "n8n Workflow Automation (100+ built & sold)",
       "AI Tool Integration & Consulting",
       "Process Optimization",
       "Custom AI Agent Design",

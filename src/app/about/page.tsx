@@ -9,6 +9,7 @@ import {
   SiInstagram,
   SiMailchimp,
   SiMeta,
+  SiN8N,
   SiOpenai,
   SiTiktok,
   SiWhatsapp,
@@ -50,6 +51,7 @@ const TOOLS = [
   { name: "Google Analytics", content: "Tracking, attribution & performance data.", icon: <SiGoogleanalytics size={50} color="#e37400" /> },
   { name: "TikTok Ads", content: "Short-form video advertising.", icon: <SiTiktok size={50} color="#fff" /> },
   { name: "OpenAI / ChatGPT", content: "AI-powered content & automation.", icon: <SiOpenai size={50} color="#fff" /> },
+  { name: "n8n", content: "Building & selling 100+ AI workflows.", icon: <SiN8N size={50} color="#ea4b71" /> },
   { name: "Zapier", content: "Automating marketing workflows.", icon: <SiZapier size={50} color="#ff4a00" /> },
   { name: "HubSpot", content: "CRM & marketing pipelines.", icon: <SiHubspot size={50} color="#ff7a59" /> },
   { name: "Mailchimp", content: "Email marketing & automation.", icon: <SiMailchimp size={50} color="#ffe01b" /> },
@@ -140,7 +142,7 @@ function Page() {
             <div className="space-y-4 sm:space-y-6">
               <h1 className="text-2xl sm:text-3xl lg:text-4xl">About me</h1>
               <p className="leading-relaxed text-sm sm:text-base text-zinc-200">
-                Hey there! I&apos;m Peter Hany, founder of Pyramid Pixel — a Senior Marketing &amp; Advertising specialist and AI consultant. I&apos;ve led marketing across real estate (Coldwell Banker), food &amp; beverage, hotels &amp; accommodation, and electronics — and built and sold 100+ AI-powered workflows online.
+                Hey there! I&apos;m Peter Hany, founder of Pyramid Pixel — a Senior Marketing &amp; Advertising specialist and AI consultant. I&apos;ve led marketing across real estate (Coldwell Banker), food &amp; beverage, hotels &amp; accommodation, electronics, and fashion — and built and sold 100+ n8n-powered AI workflows online.
               </p>
               <p className="leading-relaxed text-sm sm:text-base text-zinc-200">
                 Whether it&apos;s planning a campaign, building an AI-powered workflow, or rethinking a brand&apos;s strategy from the ground up, I combine outside-the-box creative thinking with data-driven execution to get results that actually move the needle.

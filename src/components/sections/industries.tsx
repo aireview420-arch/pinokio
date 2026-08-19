@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import { Building2, UtensilsCrossed, Hotel, Cpu } from "lucide-react";
+import { Building2, UtensilsCrossed, Hotel, Cpu, Shirt } from "lucide-react";
 import { SectionHeader } from "./section-header";
 import SectionWrapper from "../ui/section-wrapper";
 import RevealAnimation from "../reveal-animations";
@@ -29,6 +29,11 @@ const INDUSTRIES = [
     name: "Electronics",
     detail: "Retail & product marketing",
     icon: <Cpu size={26} />,
+  },
+  {
+    name: "Fashion",
+    detail: "Brand & campaign strategy",
+    icon: <Shirt size={26} />,
   },
 ];
 
@@ -57,12 +62,12 @@ const IndustriesSection = () => {
             <StatTile
               value={inView ? 100 : 0}
               suffix="+"
-              label="AI workflows built & sold online"
+              label="AI workflows built with n8n & sold online"
             />
           </RevealAnimation>
           <RevealAnimation delay={0.1}>
             <StatTile
-              value={inView ? 4 : 0}
+              value={inView ? 5 : 0}
               suffix="+"
               label="Industries served"
             />
@@ -77,7 +82,7 @@ const IndustriesSection = () => {
           </RevealAnimation>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
           {INDUSTRIES.map((industry, i) => (
             <RevealAnimation key={industry.name} delay={i * 0.1}>
               <div
