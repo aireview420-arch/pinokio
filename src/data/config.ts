@@ -31,7 +31,7 @@ const config = {
   ],
   author: "Peter Hany",
   email: "",
-  site: "https://my-3d-portfolio.vercel.app",
+  site: "https://pinokio-eta.vercel.app",
 
   // for github followers button
   githubUsername: "",
