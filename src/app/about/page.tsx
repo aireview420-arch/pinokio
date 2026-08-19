@@ -7,6 +7,7 @@ import {
   SiHootsuite,
   SiHubspot,
   SiInstagram,
+  SiLinkedin,
   SiMailchimp,
   SiMeta,
   SiN8N,
@@ -30,6 +31,12 @@ const CONTACT_LINKS = [
     content: "Message directly",
     href: config.social.whatsapp,
     icon: <SiWhatsapp />,
+  },
+  {
+    name: "LinkedIn",
+    content: "Connect with me",
+    href: config.social.linkedin,
+    icon: <SiLinkedin />,
   },
   {
     name: "Instagram",

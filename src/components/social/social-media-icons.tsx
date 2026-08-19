@@ -3,7 +3,7 @@
 import { useInView } from "framer-motion";
 import React, { useRef } from "react";
 import { Button } from "../ui/button";
-import { SiInstagram, SiWhatsapp } from "react-icons/si";
+import { SiInstagram, SiWhatsapp, SiLinkedin } from "react-icons/si";
 import { config } from "@/data/config";
 import Link from "next/link";
 
@@ -12,6 +12,11 @@ const BUTTONS = [
     name: "WhatsApp",
     href: config.social.whatsapp,
     icon: <SiWhatsapp size={"24"} color={"#fff"} />,
+  },
+  {
+    name: "LinkedIn",
+    href: config.social.linkedin,
+    icon: <SiLinkedin size={"24"} color={"#fff"} />,
   },
   {
     name: "Instagram (Personal)",

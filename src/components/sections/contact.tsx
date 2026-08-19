@@ -12,7 +12,7 @@ import { SectionHeader } from "./section-header";
 import SectionWrapper from "../ui/section-wrapper";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { SiInstagram, SiWhatsapp } from "react-icons/si";
+import { SiInstagram, SiWhatsapp, SiLinkedin } from "react-icons/si";
 
 const ContactSection = () => {
   return (
@@ -35,6 +35,12 @@ const ContactSection = () => {
               <Button className="flex items-center gap-2 w-full">
                 <SiWhatsapp size={20} />
                 <p>Message on WhatsApp</p>
+              </Button>
+            </Link>
+            <Link href={config.social.linkedin} target="_blank">
+              <Button variant={"outline"} className="flex items-center gap-2 w-full">
+                <SiLinkedin size={20} />
+                <p>Connect on LinkedIn</p>
               </Button>
             </Link>
             <Link href={config.social.instagramPersonal} target="_blank">

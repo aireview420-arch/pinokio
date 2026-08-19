@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Download } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
@@ -11,7 +11,7 @@ import {
 import { usePreloader } from "../preloader";
 import { BlurIn, BoxReveal } from "../reveal-animations";
 import ScrollDownIcon from "../scroll-down-icon";
-import { SiInstagram, SiWhatsapp } from "react-icons/si";
+import { SiInstagram, SiWhatsapp, SiLinkedin } from "react-icons/si";
 import { config } from "@/data/config";
 
 import SectionWrapper from "../ui/section-wrapper";
@@ -81,18 +81,35 @@ const HeroSection = () => {
                 </BlurIn>
               </div>
               <div className="mt-6 flex flex-col gap-3 w-fit">
-                <Link
-                  href={config.social.whatsapp}
-                  target="_blank"
-                  className="flex-1"
-                >
-                  <BoxReveal delay={2} width="100%">
-                    <Button className="flex items-center gap-2 w-full">
-                      <MessageCircle size={24} />
-                      <p>Message on WhatsApp</p>
-                    </Button>
-                  </BoxReveal>
-                </Link>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link
+                    href={config.social.whatsapp}
+                    target="_blank"
+                    className="flex-1"
+                  >
+                    <BoxReveal delay={2} width="100%">
+                      <Button className="flex items-center gap-2 w-full">
+                        <MessageCircle size={24} />
+                        <p>Message on WhatsApp</p>
+                      </Button>
+                    </BoxReveal>
+                  </Link>
+                  <Link
+                    href={config.resumeUrl}
+                    target="_blank"
+                    className="flex-1"
+                  >
+                    <BoxReveal delay={2.15} width="100%">
+                      <Button
+                        variant={"outline"}
+                        className="flex items-center gap-2 w-full"
+                      >
+                        <Download size={20} />
+                        <p>Download Resume</p>
+                      </Button>
+                    </BoxReveal>
+                  </Link>
+                </div>
                 <div className="md:self-start flex gap-3">
                   <Tooltip delayDuration={300}>
                     <TooltipTrigger asChild>
@@ -110,6 +127,15 @@ const HeroSection = () => {
                     </TooltipContent>
                   </Tooltip>
                   <div className="flex items-center h-full gap-2">
+                    <Link
+                      href={config.social.linkedin}
+                      target="_blank"
+                      className="cursor-can-hover"
+                    >
+                      <Button variant={"outline"}>
+                        <SiLinkedin size={24} />
+                      </Button>
+                    </Link>
                     <Link
                       href={config.social.instagramPersonal}
                       target="_blank"

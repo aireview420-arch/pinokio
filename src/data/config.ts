@@ -30,8 +30,9 @@ const config = {
     "hospitality marketing",
   ],
   author: "Peter Hany",
-  email: "",
+  email: "Eng_peter_hany@hotmail.com",
   site: "https://pinokio-eta.vercel.app",
+  resumeUrl: "/assets/resume/Peter-Hany-Zaki-CV.pdf",
 
   // for github followers button
   githubUsername: "",
@@ -43,6 +44,7 @@ const config = {
     instagramPersonal: "https://www.instagram.com/peteradventureseeker",
     instagramBrand: "https://www.instagram.com/pyramidpixel",
     whatsapp: "https://wa.me/201019268416",
+    linkedin: "https://www.linkedin.com/in/peter-zaki-4494243b7",
   },
 };
 export { config };
