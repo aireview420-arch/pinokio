@@ -62,12 +62,11 @@ function SlidingNumberDisplay({
   transition,
 }: SlidingNumberDisplayProps) {
   const y = useTransform(motionValue, (latest) => {
-    const fontSize = 16
     const currentNumber = latest % 10;
     const offset = (10 + number - currentNumber) % 10;
-    let translateY = offset * fontSize;
-    if (offset > 5) translateY -= 10 * fontSize;
-    return translateY;
+    let translateY = offset;
+    if (offset > 5) translateY -= 10;
+    return `${translateY}em`;
   });
 
   return (
