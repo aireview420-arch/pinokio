@@ -22,15 +22,15 @@ const links: Link[] = [
     thumbnail: '/assets/nav-link-previews/experience.png'
   },
   {
-    title: 'Projects',
-    href: '/#projects',
+    title: 'Work',
+    href: '/#case-studies',
     thumbnail: '/assets/nav-link-previews/projects.png'
   },
-  // {
-  //   title: 'Blogs',
-  //   href: '/blogs',
-  //   thumbnail: '/assets/nav-link-previews/blog.png',
-  // },
+  {
+    title: 'Insights',
+    href: '/blogs',
+    thumbnail: '/assets/nav-link-previews/blog.png',
+  },
   {
     title: 'Contact',
     href: '/#contact',

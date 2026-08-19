@@ -1,6 +1,7 @@
 import React from "react";
 import { getBlogPost, getBlogPosts } from "@/lib/mdx";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 import ScrollProgress from "@/components/ui/scroll-progress";
 import Link from "next/link";
 import { ArrowLeft, CalendarDays, User } from "lucide-react";
@@ -57,6 +58,19 @@ const components = {
   a: (props: any) => (
     <a className="text-purple-400 hover:text-purple-300 underline underline-offset-4 transition-colors" {...props} />
   ),
+  table: (props: any) => (
+    <div className="overflow-x-auto mb-8 rounded-lg border border-zinc-800">
+      <table className="w-full text-sm border-collapse" {...props} />
+    </div>
+  ),
+  thead: (props: any) => <thead className="bg-zinc-900" {...props} />,
+  tr: (props: any) => <tr className="border-b border-zinc-800 last:border-b-0" {...props} />,
+  th: (props: any) => (
+    <th className="text-left font-semibold text-zinc-200 px-4 py-3 align-top" {...props} />
+  ),
+  td: (props: any) => (
+    <td className="text-zinc-400 px-4 py-3 align-top leading-relaxed" {...props} />
+  ),
 };
 
 export default function BlogPost({ params }: { params: { slug: string } }) {
@@ -104,7 +118,11 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
         <RevealAnimation delay={0.2}>
           <article className="prose prose-invert max-w-none">
-            <MDXRemote source={post.content} components={components} />
+            <MDXRemote
+              source={post.content}
+              components={components}
+              options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+            />
           </article>
         </RevealAnimation>
       </div>

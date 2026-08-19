@@ -7,8 +7,8 @@ import { CalendarDays, User } from "lucide-react";
 import RevealAnimation from "@/components/reveal-animations";
 
 export const metadata = {
-  title: "Blog | Portfolio",
-  description: "Thoughts, tutorials, and updates from the space.",
+  title: "Insights | Peter Hany",
+  description: "Strategy notes and concept work on marketing, AI, and customer experience.",
 };
 
 export default function BlogPage() {
@@ -23,10 +23,10 @@ export default function BlogPage() {
     <div className="container mx-auto px-4 py-24 min-h-screen font-sans">
       <RevealAnimation>
         <h1 className="text-4xl md:text-6xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-          Space Log
+          Insights
         </h1>
         <p className="text-zinc-400 text-center mb-12 max-w-2xl mx-auto">
-          Documenting my journey through the cosmos of code.
+          Strategy notes and concept work on marketing, AI, and customer experience.
         </p>
       </RevealAnimation>
 
