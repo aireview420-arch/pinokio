@@ -140,10 +140,10 @@ function Page() {
             <div className="space-y-4 sm:space-y-6">
               <h1 className="text-2xl sm:text-3xl lg:text-4xl">About me</h1>
               <p className="leading-relaxed text-sm sm:text-base text-zinc-200">
-                Hey there! I&apos;m Peter Hany, founder of Pyramid Pixel — a Senior Marketing &amp; Advertising specialist and AI consultant. I help brands grow through data-driven advertising, sharp creative strategy, and practical AI automation that saves time and scales results.
+                Hey there! I&apos;m Peter Hany, founder of Pyramid Pixel — a Senior Marketing &amp; Advertising specialist and AI consultant. I&apos;ve led marketing across real estate (Coldwell Banker), food &amp; beverage, hotels &amp; accommodation, and electronics — and built and sold 100+ AI-powered workflows online.
               </p>
               <p className="leading-relaxed text-sm sm:text-base text-zinc-200">
-                Whether it&apos;s planning a campaign, building an AI-powered workflow, or rethinking a brand&apos;s strategy from the ground up, I focus on results that actually move the needle.
+                Whether it&apos;s planning a campaign, building an AI-powered workflow, or rethinking a brand&apos;s strategy from the ground up, I combine outside-the-box creative thinking with data-driven execution to get results that actually move the needle.
               </p>
             </div>
 
