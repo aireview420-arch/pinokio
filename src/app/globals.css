@@ -76,8 +76,8 @@ body {
 
 @layer utilities {
   .text-edge-outline {
-    -webkit-text-stroke: 1.5px hsl(var(--foreground));
-    text-stroke: 1.5px hsl(var(--foreground));
+    -webkit-text-stroke: 1.5px var(--brand);
+    text-stroke: 1.5px var(--brand);
   }
 
   .canvas-overlay-mode {
