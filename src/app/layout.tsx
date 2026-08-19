@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: config.ogImg,
-        width: 800,
-        height: 600,
-        alt: "Portfolio preview",
+        width: 1200,
+        height: 630,
+        alt: "Peter Hany — Pyramid Pixel",
       },
     ],
     type: "website",
