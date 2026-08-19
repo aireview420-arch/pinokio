@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import styles from "./style.module.scss";
@@ -17,6 +17,17 @@ interface HeaderProps {
 
 const Header = ({ loader }: HeaderProps) => {
   const [isActive, setIsActive] = useState<boolean>(false);
+  const [showHint, setShowHint] = useState<boolean>(false);
+
+  useEffect(() => {
+    const showTimer = setTimeout(() => setShowHint(true), 2500);
+    const hideTimer = setTimeout(() => setShowHint(false), 9000);
+    return () => {
+      clearTimeout(showTimer);
+      clearTimeout(hideTimer);
+    };
+  }, []);
+
   return (
     <motion.header
       className={cn(
@@ -60,31 +71,57 @@ const Header = ({ loader }: HeaderProps) => {
             className="mr-4"
           />
         )}
-        <Button
-          variant={"ghost"}
-          onClick={() => setIsActive(!isActive)}
-          className={cn(
-            styles.el,
-            "m-0 p-0 h-6 bg-transparent flex items-center justify-center"
-          )}
-        >
-          <div className="relative hidden md:flex items-center">
-            <motion.p
-              variants={opacity}
-              animate={!isActive ? "open" : "closed"}
-            >
-              Menu
-            </motion.p>
-            <motion.p variants={opacity} animate={isActive ? "open" : "closed"}>
-              Close
-            </motion.p>
-          </div>
-          <div
-            className={`${styles.burger} ${
-              isActive ? styles.burgerActive : ""
-            }`}
-          ></div>
-        </Button>
+        <div className="relative">
+          <Button
+            variant={"ghost"}
+            onClick={() => {
+              setIsActive(!isActive);
+              setShowHint(false);
+            }}
+            className={cn(
+              styles.el,
+              "m-0 p-0 h-6 bg-transparent flex items-center justify-center"
+            )}
+          >
+            <div className="relative flex items-center">
+              <motion.p
+                variants={opacity}
+                animate={!isActive ? "open" : "closed"}
+              >
+                Menu
+              </motion.p>
+              <motion.p variants={opacity} animate={isActive ? "open" : "closed"}>
+                Close
+              </motion.p>
+            </div>
+            <div
+              className={`${styles.burger} ${
+                isActive ? styles.burgerActive : ""
+              }`}
+            ></div>
+          </Button>
+          <AnimatePresence>
+            {showHint && !isActive && (
+              <motion.div
+                initial={{ opacity: 0, y: -6 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -6 }}
+                className="absolute top-full right-0 mt-3 flex flex-col items-end pointer-events-none"
+              >
+                <span className="text-[11px] px-2.5 py-1 rounded-full bg-foreground text-background whitespace-nowrap shadow-lg">
+                  Insights, About &amp; more here
+                </span>
+                <motion.span
+                  animate={{ y: [0, -4, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.2 }}
+                  className="text-foreground text-base leading-none mt-1"
+                >
+                  ▲
+                </motion.span>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
       <motion.div
         variants={background}
