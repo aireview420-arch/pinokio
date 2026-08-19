@@ -103,10 +103,6 @@ const IndustriesSection = () => {
             </RevealAnimation>
           ))}
         </div>
-
-        <p className="text-center text-sm text-muted-foreground mt-10">
-          Detailed campaign case studies coming soon.
-        </p>
       </div>
     </SectionWrapper>
   );
