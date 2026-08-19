@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { TrendingUp } from "lucide-react";
+import Link from "next/link";
+import { TrendingUp, BookOpen } from "lucide-react";
 import { SectionHeader } from "./section-header";
 import SectionWrapper from "../ui/section-wrapper";
 import RevealAnimation from "../reveal-animations";
@@ -14,6 +15,7 @@ type CaseStudy = {
   description: string;
   image?: string;
   isDemo?: boolean;
+  href?: string;
 };
 
 const CASE_STUDIES: CaseStudy[] = [
@@ -94,6 +96,13 @@ const CASE_STUDIES: CaseStudy[] = [
     image: "/assets/case-studies/demo-aurora-coffee-ad.png",
     isDemo: true,
   },
+  {
+    title: "Experience Engineering: Beyond the Product",
+    category: "Strategy Write-Up",
+    stat: "Coffee · Juice · Bakery · Fitness",
+    description: "A strategic breakdown of how F&B and wellness spaces can engineer environment, ritual, and psychology to build real customer loyalty. Read the full piece.",
+    href: "/blogs/fb-experience-engineering",
+  },
 ];
 
 const CaseStudiesSection = () => {
@@ -111,8 +120,8 @@ const CaseStudiesSection = () => {
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {CASE_STUDIES.map((item, i) => (
-            <RevealAnimation key={item.title + i} delay={(i % 3) * 0.1}>
+          {CASE_STUDIES.map((item, i) => {
+            const CardInner = (
               <div
                 className={cn(
                   "h-full rounded-2xl border border-zinc-700/60 bg-gradient-to-b from-zinc-900/70 via-black/50 to-black/30 backdrop-blur-md overflow-hidden",
@@ -136,7 +145,11 @@ const CaseStudiesSection = () => {
                   </div>
                 ) : (
                   <div className="w-full h-52 flex items-center justify-center bg-zinc-900/60">
-                    <TrendingUp size={40} className="text-zinc-600" />
+                    {item.href ? (
+                      <BookOpen size={40} className="text-zinc-600" />
+                    ) : (
+                      <TrendingUp size={40} className="text-zinc-600" />
+                    )}
                   </div>
                 )}
                 <div className="p-5 flex flex-col gap-2 flex-1">
@@ -154,8 +167,19 @@ const CaseStudiesSection = () => {
                   </p>
                 </div>
               </div>
-            </RevealAnimation>
-          ))}
+            );
+            return (
+              <RevealAnimation key={item.title + i} delay={(i % 3) * 0.1}>
+                {item.href ? (
+                  <Link href={item.href} className="block h-full">
+                    {CardInner}
+                  </Link>
+                ) : (
+                  CardInner
+                )}
+              </RevealAnimation>
+            );
+          })}
         </div>
       </div>
     </SectionWrapper>
