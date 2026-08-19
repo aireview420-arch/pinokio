@@ -13,6 +13,7 @@ type CaseStudy = {
   stat: string;
   description: string;
   image?: string;
+  isDemo?: boolean;
 };
 
 const CASE_STUDIES: CaseStudy[] = [
@@ -77,6 +78,22 @@ const CASE_STUDIES: CaseStudy[] = [
     description: "Brand and app concept spanning hotel, dining, transport, and travel planning.",
     image: "/assets/case-studies/sira-app-mockup.png",
   },
+  {
+    title: "AI Lead Qualification & CRM Routing",
+    category: "n8n Workflow",
+    stat: "Concept build",
+    description: "Enriches inbound leads, scores them with GPT-4, then routes qualified leads to HubSpot + Slack and the rest into a Mailchimp nurture sequence.",
+    image: "/assets/case-studies/demo-lead-qualification-workflow.png",
+    isDemo: true,
+  },
+  {
+    title: "Aurora Coffee Co. — Campaign Concept",
+    category: "Creative Direction",
+    stat: '"Your Morning, Elevated"',
+    description: "Fictional brand concept built to demonstrate ad creative direction for a food & beverage launch.",
+    image: "/assets/case-studies/demo-aurora-coffee-ad.png",
+    isDemo: true,
+  },
 ];
 
 const CaseStudiesSection = () => {
@@ -111,6 +128,11 @@ const CaseStudiesSection = () => {
                       className="object-cover"
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     />
+                    {item.isDemo && (
+                      <span className="absolute top-3 right-3 text-[10px] font-semibold uppercase tracking-wide bg-black/70 text-amber-300 border border-amber-300/40 rounded-full px-2.5 py-1 backdrop-blur-sm">
+                        Concept
+                      </span>
+                    )}
                   </div>
                 ) : (
                   <div className="w-full h-52 flex items-center justify-center bg-zinc-900/60">
